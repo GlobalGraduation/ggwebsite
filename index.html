@@ -1,34 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("div");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
 <head>
     <title>Global Graduation || Student Consultancy</title>
     <script type="text/javascript" href="http://www.w3schools.com/lib/w3data.js"></script>
@@ -36,9 +7,9 @@ function includeHTML() {
 
 <body class="home-one">
     <div class="preloader"></div>
-    <div id="includePage" w3-include-html="includes/header.html"></div>
+    <div w3-include-html="includes/header.html"></div>
     <script>
-    includeHTML();
+        w3IncludeHTML();
     </script>
 
     <section class="rev_slider_wrapper">
@@ -47,8 +18,7 @@ function includeHTML() {
             <ul>
                 <li class="gradient-overlay" data-transition="slotzoom-horizontal" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/1.jpeg"  data-saveperformance="off"  data-title="Awesome Title Here">
                     <img src="images/main-slider/1.jpeg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
-                    
-                    
+                                        
                     <div class="tp-caption lfl sfb tp-resizeme start"
                     data-x="left" data-hoffset="245"
                     data-y="center" data-voffset="-190"
