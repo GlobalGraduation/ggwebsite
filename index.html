@@ -4,6 +4,7 @@
     <title>Global Graduation || Student Consultancy</title>
     <script src="//www.w3schools.com/lib/w3data.js"></script>
     <div w3-include-html="includes/header-tags.html"></div>
+    <div class="headerTags"></div>
 </head>
 
 <body class="home-one">
@@ -498,3 +499,9 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+    $(function () {
+        $(".headerTags").load("includes/header-tags.html");
+    });
+</script>
