@@ -87,18 +87,23 @@
                     <div class="row clearfix">
                         <div class="col-md-4 col-sm-6 col-xs-12 column">
                             <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                <input type="text" name="name" placeholder="Name*" required minlength="3"/>
+                                <input type="text" name="name" placeholder="Name*" required minlength="3" maxlength="50"/>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12 column">
                             <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                <input type="email" name="_replyto" placeholder="Email*" required/>
+                                <input type="email" name="email" placeholder="Email*" maxlength="70" required/>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12 column">
                             <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                <textarea type="text" name="message" placeholder="Course Name, eg: MSc, MBA..*" required
-                                          minlength="3" required></textarea>
+                                <input type="number" name="phone" placeholder="Phone*" minlength="10" maxlength="20" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 column">
+                            <div class="form-group col-lg-12 col-md-12 col-xs-12">
+                                <textarea type="text" name="message" placeholder="Interested Course Name, eg: MSc, MBA..*" required
+                                          minlength="3" maxlength="500" required></textarea>
                             </div>
                         </div>
                     </div>
