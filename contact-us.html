@@ -15,191 +15,161 @@
     <!-- HEADER LINKS END-->
 </head>
 <body class="contact-page">
-    <div class="preloader"></div>
-    <div w3-include-html="includes/header.html"></div>
+<div class="preloader"></div>
+<div w3-include-html="includes/header.html"></div>
 
-    <section class="map-section">
-        <div class="google-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.456184166271!2d-0.3180494441872756!3d51.48649563482134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760da4c66d2025%3A0x67ca8232c1d19f90!2sProfile%20West%2C%20950%20Great%20West%20Rd%2C%20Brentford%20TW8%209ES!5e0!3m2!1sen!2suk!4v1602016511716!5m2!1sen!2suk" width="100%" height="390px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
+<section class="map-section">
+    <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.456184166271!2d-0.3180494441872756!3d51.48649563482134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760da4c66d2025%3A0x67ca8232c1d19f90!2sProfile%20West%2C%20950%20Great%20West%20Rd%2C%20Brentford%20TW8%209ES!5e0!3m2!1sen!2suk!4v1602016511716!5m2!1sen!2suk"
+                width="100%" height="390px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+    </div>
+    <div class="container">
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/contact-us">contact us</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="contact-us">
+    <div class="upper">
         <div class="container">
-            <ul>
-                <li><a href="/">home</a></li>
-                <li><a href="/contact-us">contact us</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="contact-us">
-        <div class="upper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12 column">
-                        <div class="item center">
-                            <div class="icon">
-                                <span class="icon-location"></span>
-                            </div>
-                            <div class="content">
-                                <h4><a>Address</a></h4>
-                                <p><a>UK Address</a><br>Global Graduation, The Profile West <br>950 Great West Road, Brentford TW8 9ES</p>
-                                <p><a>India Address</a><br>Global Graduation, No. 101 RK Residency<br>Road No 11, Banjarahills, Hyd-500034</p>
-                            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 column">
+                    <div class="item center">
+                        <div class="icon">
+                            <span class="icon-location"></span>
+                        </div>
+                        <div class="content">
+                            <h4><a>Address</a></h4>
+                            <p><a>UK Address</a><br>Global Graduation, The Profile West <br>950 Great West Road,
+                                Brentford TW8 9ES</p>
+                            <p><a>India Address</a><br>Global Graduation, No. 101 RK Residency<br>Road No 11,
+                                Banjarahills, Hyd-500034</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 column">
-                        <div class="item center">
-                            <div class="icon">
-                                <span class="icon-technology-2"></span>
-                            </div>
-                            <div class="content">
-                                <h4><a>Phone number</a></h4>
-                                <p>Watsapp/Call: +(44) 7459432184</p>
-                                <p>Call: +(44) 1256590140</p>
-                            </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 column">
+                    <div class="item center">
+                        <div class="icon">
+                            <span class="icon-technology-2"></span>
+                        </div>
+                        <div class="content">
+                            <h4><a>Phone number</a></h4>
+                            <p>Watsapp/Call: +(44) 7459432184</p>
+                            <p>Call: +(44) 1256590140</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 column">
-                        <div class="item center">
-                            <div class="icon">
-                                <span class="icon-interface"></span>
-                            </div>
-                            <div class="content">
-                                <h4><a>Email id</a></h4>
-                                <p>info@globalgraduation.co.uk </p>
-                                <p>admin@globalgraduation.co.uk</p>
-                            </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 column">
+                    <div class="item center">
+                        <div class="icon">
+                            <span class="icon-interface"></span>
+                        </div>
+                        <div class="content">
+                            <h4><a>Email id</a></h4>
+                            <p>info@globalgraduation.co.uk </p>
+                            <p>admin@globalgraduation.co.uk</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="section-title center">
-                <h2>Drop A <span>message</span></h2>
-            </div>
-            <?php
-                include('includes/sendemail.php');
-            ?>
-            <div class="row">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="contact-form" novalidate="novalidate">
-                    <div class="contact-box">
-                        <div class="row clearfix">
-                            <div class="alert" id="mailFiledMessage" style="display: none">
-                                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">&times;</span><?php echo $emailSubmissionErr;?>
-                            </div>
-                            <div class="success" id="mailSuccessMessage" style="display: none">
-                                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">&times;</span><?php echo $emailSubmissionSuccess;?>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12 column">
-                                <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                    <input type="text" name="name" id="name" placeholder="Name*" required minlength="3"/>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12 column">
-                                <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                    <input type="email" name="email" id="email" placeholder="Email*" required/>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12 column">
-                                <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                    <input type="text" name="phone" id="phone" placeholder="Phone No*" required minlength="10" maxlength="15"/>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12 column">
-                                <div class="form-group col-lg-12 col-md-12 col-xs-12">
-                                    <input type="text" name="course" placeholder="Course Name, eg: MSc, MBA..*" required minlength="3"/>
-                                </div>
+    </div>
+    <div class="container">
+        <div class="section-title center">
+            <h2>Drop A <span>message</span></h2>
+        </div>
+        <div class="row">
+            <form action="https://formspree.io/f/moqyjwpg" method="POST" class="contact-form">
+                <div class="contact-box">
+                    <div class="row clearfix">
+                        <div class="col-md-4 col-sm-6 col-xs-12 column">
+                            <div class="form-group col-lg-12 col-md-12 col-xs-12">
+                                <input type="text" name="name" placeholder="Name*" required minlength="3"/>
                             </div>
                         </div>
-                        <?php
-                            include('includes/uni-list.php');
-                        ?>
+                        <div class="col-md-4 col-sm-6 col-xs-12 column">
+                            <div class="form-group col-lg-12 col-md-12 col-xs-12">
+                                <input type="email" name="_replyto" placeholder="Email*" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 column">
+                            <div class="form-group col-lg-12 col-md-12 col-xs-12">
+                                <textarea type="text" name="message" placeholder="Course Name, eg: MSc, MBA..*" required
+                                          minlength="3" required></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group col-lg-12 center">
-                        <input type="submit" name="submit" class="btn-style-one center" value="Submit Now" />
-                    </div>
-                    <div>
-                        <?php
-                            if(strlen($emailSubmissionErr) > 0)
-                            {
-                            ?>
-                            <script language="javascript">
-                                document.getElementById("mailFiledMessage").style.display = "block";
-                            </script>
-                            <?php
-                            } else if(strlen($emailSubmissionSuccess) > 0) {
-                            ?>
-                            <script language="javascript">
-                                document.getElementById("mailSuccessMessage").style.display = "block";
-                            </script>
-                            <?php
-                            }
-                        ?>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="form-group col-lg-12 center">
+                    <input type="submit" name="submit" class="btn-style-one center" value="Submit Now"/>
+                </div>
+            </form>
         </div>
-    </section>
-        
-    <section class="footer">
-        <div w3-include-html="includes/footer-bottom.html"></div>
-    </section>
+    </div>
+</section>
 
-    <!--Scroll to top-->
-    <div class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></div>
+<section class="footer">
+    <div w3-include-html="includes/footer-bottom.html"></div>
+</section>
+
+<!--Scroll to top-->
+<div class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></div>
 
 
-    <!-- FOOTER LINKS -->
-    <!-- jQuery js -->
-    <script src="assets/jquery/jquery-1.12.3.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <!-- jQuery ui js -->
-    <script src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>
+<!-- FOOTER LINKS -->
+<!-- jQuery js -->
+<script src="assets/jquery/jquery-1.12.3.min.js"></script>
+<!-- bootstrap js -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- jQuery ui js -->
+<script src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>
 
-    <!-- wow js -->
-    <script src="assets/wow.js"></script>
+<!-- wow js -->
+<script src="assets/wow.js"></script>
 
-    <!-- owl carousel js -->
-    <script src="assets/owl.carousel-2/owl.carousel.min.js"></script>              <!-- jquery.bxslider js -->
-    <script src="assets/jquery.bxslider/jquery.bxslider.min.js"></script>
-    <!-- jQuery validation -->
-    <script src="assets/jquery-validation/dist/jquery.validate.min.js"></script>
-    <!-- gmap.js helper -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
-    <!-- gmap.js -->
-    <script src="assets/gmaps.js"></script>
+<!-- owl carousel js -->
+<script src="assets/owl.carousel-2/owl.carousel.min.js"></script>              <!-- jquery.bxslider js -->
+<script src="assets/jquery.bxslider/jquery.bxslider.min.js"></script>
+<!-- jQuery validation -->
+<script src="assets/jquery-validation/dist/jquery.validate.min.js"></script>
+<!-- gmap.js helper -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+<!-- gmap.js -->
+<script src="assets/gmaps.js"></script>
 
-    <!-- mixit u -->
-    <script src="assets/jquery.mixitup.min.js"></script>
-    <script src="assets/isotope.pkgd.min.js"></script>
-    <script src="assets/jquery.countdown.min.js"></script>
-    <script src="assets/masterslider/masterslider.js"></script>
-    <script src="assets/SmoothScroll.js"></script>
+<!-- mixit u -->
+<script src="assets/jquery.mixitup.min.js"></script>
+<script src="assets/isotope.pkgd.min.js"></script>
+<script src="assets/jquery.countdown.min.js"></script>
+<script src="assets/masterslider/masterslider.js"></script>
+<script src="assets/SmoothScroll.js"></script>
 
-    <!-- revolution slider js -->
-    <script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<!-- revolution slider js -->
+<script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
 
-    <script src="assets/Polyglot-Language-Switcher-master/js/jquery.polyglot.language.switcher.js"></script>
-    <script src="assets/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
-    <script src="assets/scrollbar.js"></script>
+<script src="assets/Polyglot-Language-Switcher-master/js/jquery.polyglot.language.switcher.js"></script>
+<script src="assets/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
+<script src="assets/scrollbar.js"></script>
 
-    <script src="js/default-map-script.js"></script>
-    <script src="js/script.js"></script>
+<script src="js/default-map-script.js"></script>
+<script src="js/script.js"></script>
 
-    <!-- FOOTER LINKS END-->
+<!-- FOOTER LINKS END-->
 
-    <script>w3IncludeHTML();</script>
+<script>w3IncludeHTML();</script>
 
 </body>
 </html>
