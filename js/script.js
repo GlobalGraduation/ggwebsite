@@ -8,6 +8,9 @@
 		if($('.preloader').length){
 			$('.preloader').delay(500).fadeOut(500);
 		}
+		var path = window.location.pathname;
+            console.log("The path is ", path);
+            $('#menu li a[href = "' + path + '" ]').parent().addClass("current");
 	}
 		
 
