@@ -1,0 +1,1215 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #englishInput,
+        #locationInput,
+        #promoteInput {
+            background-image: url('https://www.w3schools.com/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        #myTable th,
+        #myTable td {
+            text-align: left;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        #myTable td a{
+            text-decoration: none;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header,
+        #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="width: 90%; margin: 2% 5%;">
+
+    <h2 style="text-align: center;">University Details</h2>
+
+    <input type="text" style="width: 33%;" id="locationInput" onkeyup="locationSearch()" placeholder="Search with location.." title="Type in a location">
+    <input type="text" style="width: 33%;" id="englishInput" onkeyup="englishSearch()" placeholder="Search with English Requirement.." title="Type in english requirement">
+    <input type="text" style="width: 33%;" id="promoteInput" onkeyup="promoteSearch()" placeholder="Search with Promote.." title="Type in promote yes">
+    <button onClick="window.location.reload();" class="button">Refresh Page</button>
+
+    <table id="myTable">
+        <tr class="header">
+            <th dir="LTR">Rank</th>
+            <th dir="LTR">Uni Name</th>
+            <th dir="LTR">Location</th>
+            <th dir="LTR">English Requirement</th>
+            <th dir="LTR">Promote</th>
+            <th dir="LTR">From London</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/st-andrews/" target="_blank">University of St Andrews</a></td>
+            <td>St. Andrews, Scotland</td>
+            <td>IELTS</td>
+            <td></td>
+            <td>3981 miles</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/oxford/" target="_blank">University of Oxford</a></td>
+            <td>Oxford</td>
+            <td>IELTS</td>
+            <td></td>
+            <td>60 miles</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/cambridge/" target="_blank">University of Cambridge</a></td>
+            <td> Cambridge</td>
+            <td>IELTS, TOEFL</td>
+            <td></td>
+            <td>60 miles</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/imperial/" target="_blank">Imperial College London</a></td>            
+            <td>London</td>
+            <td>IELTS, TOEFL, HSC</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/london-school-of-economics/" target="_blank">London School of Economics and Political Science</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/durham/" target="_blank">Durham University</a></td>
+            <td>Durham</td>
+            <td></td>
+            <td></td>
+            <td>265 miles</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/university-college-london/" target="_blank">University College London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/warwick/" target="_blank">University of Warwick</a></td>
+            <td>Coventry</td>
+            <td></td>
+            <td></td>
+            <td>96.8 miles</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bath/" target="_blank">University of Bath</a></td>
+            <td>Bath</td>
+            <td></td>
+            <td></td>
+            <td>120.3 miles</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/loughborough/" target="_blank">Loughborough University</a></td>
+            <td> Loughborough</td>
+            <td></td>
+            <td></td>
+            <td>9.8 miles</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/lancaster/" target="_blank">Lancaster University</a></td>
+            <td>Lancaster</td>
+            <td></td>
+            <td></td>
+            <td>238.6 miles</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/glasgow/" target="_blank">University of Glasgow</a></td>
+            <td>Glasgow</td>
+            <td></td>
+            <td></td>
+            <td>348 miles</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/edinburgh/" target="_blank">University of Edinburgh</a></td>
+            <td>Edinburgh</td>
+            <td></td>
+            <td></td>
+            <td>416.2 miles</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bristol/" target="_blank">University of Bristol</a></td>
+            <td>Bristol</td>
+            <td></td>
+            <td></td>
+            <td>107 miles</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/leeds/" target="_blank">University of Leeds</a></td>
+            <td> Leeds</td>
+            <td></td>
+            <td></td>
+            <td>194.9 miles (3h 50 min)</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/southampton/" target="_blank">University of Southampton</a></td>
+            <td>Southampton</td>
+            <td></td>
+            <td></td>
+            <td>78 miles (1h 58 min)</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/strathclyde/" target="_blank">University of Strathclyde</a></td>
+            <td>Glasgow</td>
+            <td></td>
+            <td></td>
+            <td>415.3 miles (6hr 58 min)</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/kings-college/" target="_blank">King's College London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/york/" target="_blank">University of York</a></td>
+            <td>York</td>
+            <td></td>
+            <td></td>
+            <td>209.5 miles (3h 55 min)</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/aberdeen/" target="_blank">University of Aberdeen</a></td>
+            <td>Aberdeen</td>
+            <td></td>
+            <td></td>
+            <td>551.5 miles (9hr 29 min)</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/exeter/" target="_blank">University of Exeter</a></td>
+            <td>Exeter</td>
+            <td></td>
+            <td></td>
+            <td>195.5 miles (3hr 39 min)</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/sheffield/" target="_blank">University of Sheffield</a></td>
+            <td>Sheffield</td>
+            <td></td>
+            <td></td>
+            <td>160.7 miles (3 hr 24 min)</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/manchester/" target="_blank">University of Manchester</a></td>
+            <td>Manchester</td>
+            <td></td>
+            <td></td>
+            <td>210.2 miles ( 3hr 57 min)</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/queens-belfast/" target="_blank">Queen's University Belfast</a></td>
+            <td>Belfast</td>
+            <td></td>
+            <td></td>
+            <td>473 miles (9hr 46 min)</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/birmingham/" target="_blank">University of Birmingham</a></td>
+            <td>Birmingham</td>
+            <td></td>
+            <td></td>
+            <td>121 miles (2 hr 36 min)</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/royal-holloway/" target="_blank">Royal Holloway, University of London</a></td>
+            <td> Egham</td>
+            <td></td>
+            <td></td>
+            <td>22.9 miles (53 min)</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/east-anglia/" target="_blank">University of East Anglia</a></td>
+            <td>Norwich</td>
+            <td></td>
+            <td></td>
+            <td>116.7 miles (2 hr 27 min)</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/nottingham/" target="_blank">University of Nottingham</a></td>
+            <td>Nottingham</td>
+            <td></td>
+            <td></td>
+            <td>126.5 miles (2 hr 39 min)</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/harper-adams/" target="_blank">Harper Adams University</a></td>
+            <td>Edgmond</td>
+            <td></td>
+            <td></td>
+            <td>150.9 miles ( 3 hr 12 min)</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/heriot-watt/" target="_blank">Heriot-Watt University</a></td>
+            <td>Edinburgh</td>
+            <td></td>
+            <td></td>
+            <td>413.4 miles (7 hr 19 min)</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/liverpool/" target="_blank">University of Liverpool</a></td>
+            <td>Liverpool</td>
+            <td></td>
+            <td>Yes</td>
+            <td>210.3 miles (4 hr 5 min)</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/surrey/" target="_blank">University of Surrey</a></td>
+            <td>Guildford</td>
+            <td></td>
+            <td></td>
+            <td>32.3 miles (1 hr 5 min)</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/soas/" target="_blank">SOAS University of London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/reading/" target="_blank">University of Reading</a></td>
+            <td>Reading</td>
+            <td></td>
+            <td></td>
+            <td>39 miles (1hr 15 min)</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/cardiff/" target="_blank">Cardiff University</a></td>
+            <td>Cardiff</td>
+            <td></td>
+            <td></td>
+            <td>152 miles (3hr 5 min)</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/dundee/" target="_blank">University of Dundee</a></td>
+            <td>Dundee</td>
+            <td></td>
+            <td></td>
+            <td>484 miles (8hr 22min)</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/leicester/" target="_blank">University of Leicester</a></td>
+            <td>Leicester</td>
+            <td></td>
+            <td></td>
+            <td>102.3 miles (2hr 27min)</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/aberystwyth/" target="_blank">Aberystwyth University</a></td>
+            <td>Aberystwyth</td>
+            <td></td>
+            <td></td>
+            <td>226.3 miles (5hr 7min)</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/swansea/" target="_blank">Swansea University</a></td>
+            <td>Swansea</td>
+            <td></td>
+            <td></td>
+            <td>189.8 miles (3hr 48min)</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/queen-mary/" target="_blank">Queen Mary, University of London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/stirling/" target="_blank">University of Stirling</a></td>
+            <td>Stirling</td>
+            <td></td>
+            <td></td>
+            <td>433.7 miles ( 7hr 45 min)</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/newcastle/" target="_blank">Newcastle University</a></td>
+            <td>Newcastle upon Tyne</td>
+            <td></td>
+            <td></td>
+            <td>284 miles (5hr 25 min)</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/essex/" target="_blank">University of Essex</a></td>
+            <td>Colchester</td>
+            <td></td>
+            <td></td>
+            <td>68 miles (1hr 50 min)</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/ulster/" target="_blank">Ulster University</a></td>
+            <td>Ulster, Northern Ireland</td>
+            <td></td>
+            <td></td>
+            <td>1.9 miles (19 min)</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/aston/" target="_blank">Aston University</a></td>
+            <td>Birmingham </td>
+            <td></td>
+            <td></td>
+            <td>117 miles (2hr 42min)</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/kent/" target="_blank">University of Kent</a></td>
+            <td>Kent</td>
+            <td></td>
+            <td></td>
+            <td>60.9 miles (1hr 50min)</td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/sussex/" target="_blank">University of Sussex</a></td>
+            <td>Brighton</td>
+            <td></td>
+            <td></td>
+            <td>53.2 miles (1hr 51min)</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/keele/" target="_blank">Keele University</a></td>
+            <td>Newcastle-under-Lyme</td>
+            <td></td>
+            <td></td>
+            <td>158.7miles (3hr 21min)</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/lincoln/" target="_blank">University of Lincoln</a></td>
+            <td>Lincoln </td>
+            <td></td>
+            <td></td>
+            <td>153 miles (3hr 20min)</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/chichester/" target="_blank">University of Chichester</a></td>
+            <td>Chichester</td>
+            <td></td>
+            <td>Yes</td>
+            <td>72.2 miles (2hr 3min)</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/coventry/" target="_blank">Coventry University</a></td>
+            <td>Coventry, London</td>
+            <td></td>
+            <td>Yes</td>
+            <td>95.3 miles (2hr 22min)</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/hull/" target="_blank">University of Hull</a></td>
+            <td>Hull </td>
+            <td></td>
+            <td></td>
+            <td>203.6 miles 4hr 26min)</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/london-arts/" target="_blank">University of the Arts London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/oxford-brookes/" target="_blank">Oxford Brookes University</a></td>
+            <td>Oxford</td>
+            <td></td>
+            <td></td>
+            <td>54 miles (1hr 42 min)</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/city/" target="_blank">City, University of London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/norwich-university-of-the-arts/" target="_blank">Norwich University of the Arts</a></td>
+            <td>Norwich</td>
+            <td></td>
+            <td></td>
+            <td>116.9 miles (2hr 47 min)</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/edinburgh-napier/" target="_blank">Edinburgh Napier University</a></td>
+            <td>Edinburgh</td>
+            <td></td>
+            <td></td>
+            <td>415 miles (7hr 47 min)</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/plymouth/" target="_blank">University of Plymouth</a></td>
+            <td>Plymouth</td>
+            <td></td>
+            <td></td>
+            <td>215 miles (4hr 32 min)</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/edge-hill/" target="_blank">Edge Hill University</a></td>
+            <td>Ormskirk</td>
+            <td></td>
+            <td></td>
+            <td>210.9 miles (4hr 23min)</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/glasgow-caledonian/" target="_blank">Glasgow Caledonian University</a></td>
+            <td>Glasgow </td>
+            <td></td>
+            <td></td>
+            <td>3.7 miles (34 min)</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/goldsmiths/" target="_blank">Goldsmiths, University of London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/robert-gordon-university/" target="_blank">Robert Gordon University</a></td>
+            <td>Garthdee, Aberdeen</td>
+            <td></td>
+            <td></td>
+            <td>547.7 miles (9hr 52min)</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/northumbria/" target="_blank">Northumbria University</a></td>
+            <td>Newcastle, London</td>
+            <td></td>
+            <td></td>
+            <td>276 miles (2hr 51min)</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bangor/" target="_blank">Bangor University</a></td>            
+            <td>Bangor </td>
+            <td></td>
+            <td></td>
+            <td>274 miles (4hr 49 min)</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/roehampton/" target="_blank">University of Roehampton</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/queen-margaret/" target="_blank">Queen Margaret University</a></td>
+            <td>Musselburgh</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/st-marys/" target="_blank">St Mary’s University, London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/chester/" target="_blank">University of Chester</a></td>
+            <td>Chester </td>
+            <td></td>
+            <td></td>
+            <td>219.8 miles (3hr 49 min)</td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/university-for-the-creative-arts/" target="_blank">University for the Creative Arts</a></td>
+            <td>Farnham </td>
+            <td></td>
+            <td></td>
+            <td>41 miles (1hr 12 min)</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/nottingham-trent/" target="_blank">Nottingham Trent University</a></td>
+            <td>Nottingham</td>
+            <td></td>
+            <td></td>
+            <td>132 miles (2hr 58 min)</td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/manchester-metropolitan/" target="_blank">Manchester Metropolitan University</a></td>
+            <td>Manchester</td>
+            <td></td>
+            <td></td>
+            <td>207 miles (3hr 47 min)</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/sheffield-hallam/" target="_blank">Sheffield Hallam University</a></td>
+            <td>Sheffield</td>
+            <td></td>
+            <td></td>
+            <td>165 miles (3 hr 34 min)</td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/west-of-england/" target="_blank">UWE Bristol</a></td>
+            <td>Bristol </td>
+            <td></td>
+            <td></td>
+            <td>114 miles (2hr 6 min)</td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/university-west-london/" target="_blank">University of West London</a></td>
+            <td>London</td>
+            <td></td>
+            <td>Yes</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/huddersfield/" target="_blank">University of Huddersfield</a></td>
+            <td>Huddersfield </td>
+            <td></td>
+            <td></td>
+            <td>199 miles (3 hr 59 min)</td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/staffordshire/" target="_blank">Staffordshire University</a></td>
+            <td>Stoke-on-Trent </td>
+            <td></td>
+            <td>Yes</td>
+            <td>7.1 miles (31 milles)</td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/sunderland/" target="_blank">University of Sunderland</a></td>
+            <td>Sunderland</td>
+            <td></td>
+            <td></td>
+            <td>6.7 miles (27 min)</td>
+        </tr>
+        <tr>
+            <td>78</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/st-georges/" target="_blank">St George's, University of London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/cardiff-metropolitan-university/" target="_blank">Cardiff Metropolitan University</a></td>
+            <td>Cardiff</td>
+            <td></td>
+            <td></td>
+            <td>149.9 miles (2hr 45 min)</td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/arts-university-bournemouth/" target="_blank">Arts University Bournemouth</a></td>
+            <td>Bournemouth</td>
+            <td></td>
+            <td></td>
+            <td>109 miles (2hr 12 min)</td>
+        </tr>
+        <tr>
+            <td>81</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/liverpool-hope/" target="_blank">Liverpool Hope University</a></td>
+            <td> Liverpool </td>
+            <td></td>
+            <td></td>
+            <td>217 miles (3hr 47 min)</td>
+        </tr>
+        <tr>
+            <td>82</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bishop-grosseteste/" target="_blank">Bishop Grosseteste University</a></td>
+            <td>Lincoln</td>
+            <td></td>
+            <td></td>
+            <td>143.7 miles (2hr 55 min)</td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/trinity-saint-david/" target="_blank">University of Wales Trinity Saint David</a></td>
+            <td>Wales</td>
+            <td></td>
+            <td>Yes</td>
+            <td>216 miles (4hr 25 min)</td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/birmingham-city/" target="_blank">Birmingham City University</a></td>
+            <td>Birmingham</td>
+            <td></td>
+            <td></td>
+            <td>125.7 miles (2hr 26 min)</td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/york-st-john/" target="_blank">York St John University</a></td>
+            <td>York</td>
+            <td></td>
+            <td></td>
+            <td>2.3 miles (12 min)</td>
+        </tr>
+        <tr>
+            <td>86</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/worcester/" target="_blank">University of Worcester</a></td>
+            <td>Worcester</td>
+            <td></td>
+            <td></td>
+            <td>134.4 miles (2hr 32min)</td>
+        </tr>
+        <tr>
+            <td>87</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/falmouth/" target="_blank">Falmouth University</a></td>
+            <td>Falmouth, England</td>
+            <td></td>
+            <td></td>
+            <td>292 miles (5hr 6 min)</td>
+        </tr>
+        <tr>
+            <td>88</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/portsmouth/" target="_blank">University of Portsmouth</a></td>
+            <td>Portsmouth</td>
+            <td></td>
+            <td></td>
+            <td>83.3 miles (1hr 46 min)</td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/greenwich/" target="_blank">University of Greenwich</a></td>
+            <td>London</td>
+            <td></td>
+            <td>Yes</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bradford/" target="_blank">University of Bradford</a></td>
+            <td>Bradford</td>
+            <td></td>
+            <td></td>
+            <td>202 miles (3hr 58 min)</td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/buckingham/" target="_blank">University of Buckingham</a></td>
+            <td>Buckingham</td>
+            <td></td>
+            <td></td>
+            <td>77.2 miles (1hr 34 min)</td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bolton/" target="_blank">University of Bolton</a></td>
+            <td>Bolton</td>
+            <td></td>
+            <td></td>
+            <td>219.6 miles (3hr 52 min)</td>
+        </tr>
+        <tr>
+            <td>93</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/liverpool-john-moores/" target="_blank">Liverpool John Moores University</a></td>
+            <td>Liverpool</td>
+            <td></td>
+            <td></td>
+            <td>219 miles (3hr 56 min)</td>
+        </tr>
+        <tr>
+            <td>94</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/abertay-dundee/" target="_blank">Abertay University</a></td>
+            <td>Dundee</td>
+            <td></td>
+            <td></td>
+            <td>480 miles (7hr 58 min)</td>
+        </tr>
+        <tr>
+            <td>94</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/derby/" target="_blank">University of Derby</a></td>
+            <td>Derby</td>
+            <td></td>
+            <td></td>
+            <td>153.9 miles (2hr 47min)</td>
+        </tr>
+        <tr>
+            <td>96</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/hertfordshire/" target="_blank">University of Hertfordshire</a></td>
+            <td>Hatfield</td>
+            <td></td>
+            <td></td>
+            <td>20.7 miles (53 min)</td>
+        </tr>
+        <tr>
+            <td>96</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/gloucestershire/" target="_blank">University of Gloucestershire</a></td>
+            <td>Gloucester and Cheltenham</td>
+            <td></td>
+            <td></td>
+            <td>109 miles (2hr 12 min)</td>
+        </tr>
+        <tr>
+            <td>98</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/salford/" target="_blank">University of Salford</a></td>
+            <td>Manchester</td>
+            <td></td>
+            <td></td>
+            <td>215.8 miles (3hr 44min)</td>
+        </tr>
+        <tr>
+            <td>99</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/south-wales/" target="_blank">University of South Wales</a></td>
+            <td>Cardiff, Newport</td>
+            <td></td>
+            <td></td>
+            <td>138 miles (2hr 10min)</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/london-metropolitan/" target="_blank">London Metropolitan University</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/kingston/" target="_blank">Kingston University</a></td>
+            <td>Kingston-upon-Thames,</td>
+            <td>London</td>
+            <td></td>
+            <td>11.7 miles (43 min)</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/plymouth-marjon/" target="_blank">Plymouth Marjon University</a></td>
+            <td>Plymouth</td>
+            <td></td>
+            <td></td>
+            <td>216.5 miles (4hr 7 min)</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bath-spa/" target="_blank">Bath Spa University</a></td>
+            <td>Bath</td>
+            <td></td>
+            <td></td>
+            <td>115.9 miles (2hr 22min)</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/leeds-arts-university/" target="_blank">Leeds Arts University</a></td>
+            <td>Leeds</td>
+            <td></td>
+            <td></td>
+            <td>195.9 miles (3hr 53 min)</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/suffolk/" target="_blank">University of Suffolk</a></td>
+            <td>Ipswich</td>
+            <td></td>
+            <td></td>
+            <td>84.3 miles (2hr 3 min)</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bournemouth/" target="_blank">Bournemouth University</a></td>
+            <td>Bournemouth</td>
+            <td></td>
+            <td></td>
+            <td>108.7 miles (2hr 13min)</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/winchester/" target="_blank">University of Winchester</a></td>
+            <td>Winchester</td>
+            <td></td>
+            <td></td>
+            <td>70 miles (1hr 33min)</td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/university-of-central-lancashire/" target="_blank">University of Central Lancashire</a></td>
+            <td>Preston</td>
+            <td></td>
+            <td></td>
+            <td>229.4 miles (4h 13min)</td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/northampton/" target="_blank">University of Northampton</a></td>
+            <td>Northampton</td>
+            <td></td>
+            <td></td>
+            <td>68.8 miles (1hr 45 min)</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/glyndwr/" target="_blank">Wrexham Glyndwr University</a></td>
+            <td>Wrexham</td>
+            <td></td>
+            <td></td>
+            <td>200.3 miles (4hrs)</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/west-scotland/" target="_blank">University of the West of Scotland (UWS)</a></td>
+            <td>Paisley, Hamilton, Dumfries and Ayr, London</td>
+            <td></td>
+            <td></td>
+            <td>418 miles (7hr 25 min)</td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/leeds-beckett/" target="_blank">Leeds Beckett University</a></td>
+            <td>Leeds</td>
+            <td></td>
+            <td></td>
+            <td>195 miles (3hr 58 min)</td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/solent-university/" target="_blank">Solent University</a></td>
+            <td>Southampton</td>
+            <td></td>
+            <td></td>
+            <td>79.5 miles (1hr 56min)</td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/hartpury/" target="_blank">Hartpury University</a></td>
+            <td>Gloucester</td>
+            <td></td>
+            <td></td>
+            <td>117.4 miles (2hr 37 min)</td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/anglia-ruskin/" target="_blank">Anglia Ruskin University - ARU</a></td>
+            <td>Cambridge, Chelmsford</td>
+            <td></td>
+            <td></td>
+            <td>64.8 miles (1hr 38 min), 40 miles (35min)</td>
+        </tr>
+        <tr>
+            <td>116</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/royal-agricultural-university/" target="_blank">Royal Agricultural University</a></td>
+            <td>Cirencester</td>
+            <td></td>
+            <td></td>
+            <td>95.5 miles (2hr 10 min)</td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/brighton/" target="_blank">University of Brighton</a></td>
+            <td>Brighton and Eastbourne</td>
+            <td></td>
+            <td></td>
+            <td>53.5 miles (1hr)</td>
+        </tr>
+        <tr>
+            <td>118</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/teesside/" target="_blank">Teesside University</a></td>
+            <td>Middlesbrough</td>
+            <td></td>
+            <td></td>
+            <td>244.8 miles (4hr 42 min)</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/canterbury-christchurch/" target="_blank">Canterbury Christ Church University</a></td>
+            <td>Canterbury</td>
+            <td></td>
+            <td></td>
+            <td>61.3 miles (1hr 48 min)</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/buckinghamshire-new/" target="_blank">Buckinghamshire New University</a></td>
+            <td>High Wycombe</td>
+            <td></td>
+            <td></td>
+            <td>32.1 miles (1 hr 8 min)</td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/brunel/" target="_blank">Brunel University London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>122</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/newman/" target="_blank">Newman University, Birmingham</a></td>
+            <td>Birmingham</td>
+            <td></td>
+            <td></td>
+            <td>117.5 miles (2hr 38min)</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/middlesex/" target="_blank">Middlesex University</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/leeds-trinity/" target="_blank">Leeds Trinity University</a></td>
+            <td>Leeds</td>
+            <td></td>
+            <td></td>
+            <td>200.6 miles (4hr 17min)</td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/cumbria/" target="_blank">University of Cumbria</a></td>
+            <td>Carlisle</td>
+            <td></td>
+            <td></td>
+            <td>317 miles (5hr 33min)</td>
+        </tr>
+        <tr>
+            <td>126</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/demontfort/" target="_blank">De Montfort University</a></td>
+            <td>Leicester</td>
+            <td></td>
+            <td>Yes</td>
+            <td>105.6 (2hr 38min)</td>
+        </tr>
+        <tr>
+            <td>127</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/london-south-bank/" target="_blank">London South Bank University</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>128</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/wolverhampton/" target="_blank">University of Wolverhampton</a></td>
+            <td>Wolverhampton</td>
+            <td></td>
+            <td></td>
+            <td>130 miles (2hr 55min)</td>
+        </tr>
+        <tr>
+            <td>129</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/westminster/" target="_blank">University of Westminster</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>130</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/east-london/" target="_blank">University of East London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>131</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/ravensbourne/" target="_blank">Ravensbourne University London</a></td>
+            <td>London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>132</td>
+            <td><a href="https://www.studyin-uk.com/profiles/university/bedfordshire/" target="_blank">University of Bedfordshire</a></td>
+            <td>Luton</td>
+            <td></td>
+            <td>Yes</td>
+            <td>34 miles (1hr 5min)</td>
+        </tr>
+    </table>
+
+    <script>
+        function locationSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("locationInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+            englishSearchInput = document.getElementById("englishInput");
+            promotionSearchInput = document.getElementById("promoteInput");
+            englishSearchInput.value = "";
+            promotionSearchInput.value = "";
+        }
+        function englishSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("englishInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[3];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+            locationSearchInput = document.getElementById("locationInput");
+            promotionSearchInput = document.getElementById("promoteInput");
+            locationSearchInput.value = "";
+            promotionSearchInput.value = "";
+        }
+        function promoteSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("promoteInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[4];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+            locationSearchInput = document.getElementById("locationInput");
+            englishSearchInput = document.getElementById("englishInput");
+            locationSearchInput.value = "";
+            englishSearchInput.value = "";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
