@@ -243,7 +243,7 @@ ul,li{
     font-size: 20px;
     border: 2px solid transparent;
     text-transform: capitalize;
-    background: #fba505;
+    background: #d32525;
     display: inline-block;
     min-width: 170px;
     color: #fff;
@@ -426,11 +426,11 @@ ul,li{
 .section-title h2 {
     position: relative;
     font-size: 33px;
-    color: #8a7bd1;
+    color: #013366;
     padding-bottom: 23px;
 }
 .section-title h2 span {
-    color: #f8b54d;
+    color: #d32525;
 }
 
 .section-title h2:after {
@@ -455,10 +455,6 @@ ul,li{
 
 
 
-
-
-
-
 ::-webkit-input-placeholder {
     color: #777;
 }
@@ -470,11 +466,4 @@ ul,li{
 ::-ms-input-placeholder {
     color: #777;
 }
-
-
-
-
-
-
-
 
