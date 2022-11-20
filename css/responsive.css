@@ -183,7 +183,7 @@
 	}
 	.navbar-toggle {
 	    position: absolute;
-	    border: 1px solid #8a7bd1;
+	    border: 1px solid #013366;
 	    margin: 0;
 	    top: 50%;
 	    margin-top: -17px;
@@ -229,7 +229,7 @@
 	.navbar .collapsing{
 		max-height: 310px;
 		padding:0px;
-		border:1px solid #8a7bd1;
+		border:1px solid #013366;
 		border-radius:3px;
 		-ms-border-radius:3px;
 		-moz-border-radius:3px;
@@ -257,7 +257,7 @@
 	}
 
 	.navbar .navbar-header .navbar-toggle .icon-bar{
-		background:#8a7bd1;	
+		background:#013366;	
 	}
 
 	.navbar .navbar-collapse > ul {
@@ -267,7 +267,7 @@
 		float:none !important;
 		margin:0px;
 		width:100%;
-		background: #8a7bd1;
+		background: #013366;
 	}
 	.navbar .navbar-collapse ul > li:first-child > a {
 	    padding-left: 10px;
@@ -306,7 +306,7 @@
 		right:auto !important;
 		top:auto !important;
 		width:100%;
-		background:#8a7bd1;
+		background:#013366;
 		border-radius:0px;
 		-webkit-border-radius:0px;
 		-ms-border-radius:0px;
@@ -339,7 +339,7 @@
 	.navbar .navbar-collapse ul > li > ul > li > ul > li > a{
 		line-height:22px !important;
 		color:#ffffff;
-		background:#8a7bd1 !important;
+		background:#013366 !important;
 		text-align: right;
 	}
 	.header.style-2 .navbar .navbar-collapse ul > li > a,
@@ -415,7 +415,7 @@
 @media only screen and (max-width: 499px){
 	.navbar-toggle {
 	    position: absolute;
-	    border: 1px solid #8a7bd1;
+	    border: 1px solid #013366;
 	    margin: 0;
 	    top: 50%;
 	    margin-top: -25px;
